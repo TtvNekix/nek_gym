@@ -53,9 +53,10 @@ end
 
 Citizen.CreateThread(function()
 	while true do
-		Citizen.Wait(0)
+		local time = 1000
 		local plyCoords = GetEntityCoords(GetPlayerPed(-1), false)
 			if GetDistanceBetweenCoords(-1202.09, -1567.54, 4.61, plyCoords.x, plyCoords.y, plyCoords.z) < 20 then
+				time = 0
 				DrawMarker(3, -1202.9837, -1565.1718, 4.6115, 0, 0, 0, 0, 0, 0, 0.301, 0.301, 0.3001, 0, 255, 50, 200, 0, 0, 0, 1)
 				DrawMarker(3, -1203.3242, -1570.6184, 4.6115, 0, 0, 0, 0, 0, 0, 0.301, 0.301, 0.3001, 0, 255, 50, 200, 0, 0, 0, 1)
 				DrawMarker(3, -1204.7958, -1560.1906, 4.6115, 0, 0, 0, 0, 0, 0, 0.301, 0.301, 0.3001, 0, 255, 50, 200, 0, 0, 0, 1)
@@ -176,6 +177,7 @@ Citizen.CreateThread(function()
 				end			
             end
         end
+			Citizen.Wait(time)
     end
 end)
 
