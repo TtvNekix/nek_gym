@@ -28,7 +28,7 @@ ESX.RegisterUsableItem('protein_shake', function(source)
 	local xPlayer = ESX.GetPlayerFromId(source)
 
 	xPlayer.removeInventoryItem('protein_shake', 1)
-	TriggerClientEvent('esx_status:add', source, 'thirst', 350000)
+	TriggerClientEvent('esx_status:add', source, 'thirst', Config['AddProteinShake'])
 	TriggerClientEvent('esx_basicneeds:onDrink', source)
 	TriggerClientEvent('esx:showNotification', source, 'Has bebido un ~g~batido de proteinas')
 
@@ -38,7 +38,7 @@ ESX.RegisterUsableItem('sportlunch', function(source)
 	local xPlayer = ESX.GetPlayerFromId(source)
 
 	xPlayer.removeInventoryItem('sportlunch', 1)
-	TriggerClientEvent('esx_status:add', source, 'hunger', 350000)
+	TriggerClientEvent('esx_status:add', source, 'hunger', Config['AddSportLunch'])
 	TriggerClientEvent('esx_basicneeds:onEat', source)
 	TriggerClientEvent('esx:showNotification', source, 'Has comido un ~g~almuerzo deportivo')
 
@@ -48,7 +48,7 @@ ESX.RegisterUsableItem('powerade', function(source)
 	local xPlayer = ESX.GetPlayerFromId(source)
 
 	xPlayer.removeInventoryItem('powerade', 1)
-	TriggerClientEvent('esx_status:add', source, 'thirst', 700000)
+	TriggerClientEvent('esx_status:add', source, 'thirst', Config['AddPowerade'])
 	TriggerClientEvent('esx_basicneeds:onDrink', source)
 	TriggerClientEvent('esx:showNotification', source, 'Has bebido un ~g~powerade')
 
