@@ -112,7 +112,7 @@ Citizen.CreateThread(function()
 							TaskStartScenarioInPlace(playerPed, "prop_human_muscle_chin_ups", 0, true)
 							Citizen.Wait(30000)
 							exports["gamz-skillsystem"]:UpdateSkill("Strength", 2)
-							exports["gamz-skillsystem"]:UpdateSkill("Capacidad Pulmonar", 0.5)
+							exports["gamz-skillsystem"]:UpdateSkill("Lung Capacity", 0.5)
 							ClearPedTasksImmediately(playerPed)
 				end			
             end
