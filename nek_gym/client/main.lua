@@ -33,7 +33,7 @@ Citizen.CreateThread(function()
 	SetBlipAsShortRange(blip, true)
 	BeginTextCommandSetBlipName("STRING")
 	AddTextComponentString("Gym")
-
+    EndTextCommandSetBlipName(blip)
 end)
 
 DrawText3D = function(x, y, z, text)
